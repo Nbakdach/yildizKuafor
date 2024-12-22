@@ -1,0 +1,22 @@
+using Microsoft.EntityFrameworkCore;
+using yidizKuafor.Models;
+
+namespace yidizKuafor.data1
+{
+
+public class AppDbContext: DbContext
+{
+    public AppDbContext()
+    {}
+    public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
+    {}
+    public DbSet<User> user {get;set ;}
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("sha256:9d0e27694fc9e99e3bfbe807eff0dc6a930d9d2af9d878845de7b819257c7ada");
+            base.OnConfiguring(optionsBuilder);
+        }
+
+
+    }
+}
