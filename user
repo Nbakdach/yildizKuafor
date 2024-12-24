@@ -1,1 +1,19 @@
+namespace webprogramlamaodev.Models
+{
+	public class Musteri
+	{
+		public string Id { get; set; }
+		public string Ad { get; set; }
+		public string MusteriTelefon { get; set; }
+		public List<Randevu> Randevular { get; set; } = new();
 
+	}
+}
+public class Personel
+	{
+		public string Id { get; set; }
+		public string Ad { get; set; }
+		public string Uzmanlik { get; set; }
+		public bool Musaitlik { get; set; }
+		public List<Islem> Islemler { get; set; } = new();	
+	}
