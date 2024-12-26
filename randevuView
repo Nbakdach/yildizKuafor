@@ -1,0 +1,27 @@
+@model Randevu
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Randevu Al</h2>
+<form asp-action="Create" method="post">
+    <label>İsim:</label>
+    <input asp-for="MusteriAd" type="text" />
+    <br />
+    <label>Telefon:</label>
+    <input asp-for="MusteriTelefon" type="text" />
+    <br />
+    <label>İşlem:</label>
+    <select asp-for="IslemId">
+        <!-- İşlemleri buraya yükle -->
+    </select>
+    <br />
+    <label>Çalışan:</label>
+    <select asp-for="PersonelId">
+        <!-- Çalışanları buraya yükle -->
+    </select>
+    <br />
+    <label>Tarih:</label>
+    <input asp-for="Tarih" type="datetime-local" />
+    <br />
+    <button type="submit">Randevu Al</button>
+</form>
